@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 1rem;
+}
+body {
+  background-color: #000;
+  color: #fff;
+}
+header {
+  /* border: 2px solid pink; */
+}
+.navbar-container {
+  /* border: 2px solid yellow; */
+  width: 60%;
+  padding: 0 2rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 700;~
+}
+.navbar-container ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-container ul li {
+  margin-left: 1rem;
+  list-style: none;
+}
+.navbar-container ul li a {
+  color: #ffffffce;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+.social {
+  margin-top: 0.3rem;
+}
+.twitter a {
+  border: 2px solid white;
+  padding: 2px 10px;
+  text-decoration: none;
+  border-radius: 10px;
+  border-color: #ffffff4b;
+  color: #ffffffce;
+  margin-left: 1rem;
+  font-weight: 300;
+  font-size: 1rem;
+}
+.linkedin a {
+  border: 2px solid white;
+  padding: 2px 10px;
+  text-decoration: none;
+  border-radius: 10px;
+  border-color: #ffffff4b;
+  color: #ffffffce;
+  margin-left: 1rem;
+  font-weight: 300;
+  font-size: 1rem;
+}
+.git a {
+  border: 2px solid white;
+  padding: 2px 10px;
+  text-decoration: none;
+  border-radius: 10px;
+  border-color: #ffffff4b;
+  color: #ffffffce;
+  margin-left: 1rem;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.heroContainer {
+  /* border: 2px solid blue; */
+  width: 60%;
+  margin: 5rem auto 0;
+}
+.heroItems {
+  /* border: 2px solid pink; */
+  margin: 0 auto;
+}
+.heroItems h1{
+  font-size: 3rem;
+  text-align: center;
+}
+.heroItems p{
+  font-size: 1.2rem;
+  text-align: center;
+  color: #ffffffce;
+}
