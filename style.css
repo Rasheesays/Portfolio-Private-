@@ -178,7 +178,7 @@ header {
 /* ===================== */
 
 /* When the screen width is 768px or less, make navbar items stacked vertically */
- @media (min-width: 393px){
+ @media (min-width: 412px){
   .navbar-container {
     width: 100%;
     padding: 0;
