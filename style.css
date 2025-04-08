@@ -1,51 +1,74 @@
+/* =================== */
+/* =================== */
+/* ====== FONTS ====== */
+/* =================== */
+/* =================== */
+
+/* Inter Light */
 @font-face {
   font-family: "inter-Light";
   src: url(/Inter-4.1\ fonts/Inter-Light.woff2) format("woff2");
   font-weight: lighter;
   font-style: normal;
 }
+
+/* Inter Regular */
 @font-face {
   font-family: "inter-Regular";
   src: url(/Inter-4.1\ fonts/Inter-Regular.woff2) format("woff2");
   font-weight: normal;
   font-style: normal;
 }
+
+/* Inter Medium */
 @font-face {
   font-family: "inter-Medium";
   src: url(/Inter-4.1\ fonts/Inter-Medium.woff2) format("woff2");
   font-weight: 400;
   font-style: normal;
 }
+
+/* Inter Bold (used for general bold text) */
 @font-face {
   font-family: "inter";
   src: url(/Inter-4.1\ fonts/Inter-Regular.woff2) format("woff2");
   font-weight: bold;
   font-style: normal;
 }
+
+/* Inter Bold (explicit) */
 @font-face {
   font-family: "inter-Bold";
   src: url(/Inter-4.1\ fonts/Inter-Bold.woff2) format("woff2");
   font-weight: bold;
   font-style: normal;
 }
+
+/* Inter Extra Bold */
 @font-face {
   font-family: "inter-ExtraBold";
   src: url(/Inter-4.1\ fonts/inter-ExtraBold.woff2) format("woff2");
   font-weight: 800;
   font-style: normal;
 }
+
+/* Inter Display Bold */
 @font-face {
   font-family: "interDisplay-Bold";
   src: url(/Inter-4.1\ fonts/InterDisplay-Bold.woff2) format("woff2");
   font-weight: 700;
   font-style: normal;
 }
+
+/* Inter Display Extra Bold */
 @font-face {
   font-family: "interDisplay-ExtraBold";
   src: url(/Inter-4.1\ fonts/InterDisplay-ExtraBold.woff2) format("woff2");
   font-weight: 800;
   font-style: normal;
 }
+
+/* Inter Display Black */
 @font-face {
   font-family: "interDisplay-Black";
   src: url(/Inter-4.1\ fonts/InterDisplay-Black.woff2) format("woff2");
@@ -53,23 +76,41 @@
   font-style: normal;
 }
 
+/* =============================== */
+/* ====== GLOBAL BASE STYLES ===== */
+/* =============================== */
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
 html {
   font-size: 1rem;
 }
+
 body {
   background-color: #000;
   color: #fff;
+  overflow-x: hidden;
+  border: 2px solid white;
 }
+
+/* ========================= */
+/* ========================= */
+/* ====== NAVIGATION ====== */
+/* ========================= */
+/* ========================= */
+
 header {
-  /* border: 2px solid pink; */
+  border: 2px solid red;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
+/* Main navbar wrapper */
 .navbar-container {
-  /* border: 2px solid yellow; */
   width: 60%;
   padding: 0 2rem;
   margin: 0 auto;
@@ -78,49 +119,47 @@ header {
   align-items: center;
   font-size: 1rem;
   font-weight: 700;
+  border: 2px solid blue;
+  /* overflow-x: auto; */
+  
 }
+
+/* Prevent the scrollbar from showing up */
+.navbar-container::-webkit-scrollbar {
+  /* display: none; */
+}
+
+/* Navigation links */
 .navbar-container ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: 2px solid yellow;
 }
+
 .navbar-container ul li {
   margin-left: 1rem;
   margin-top: 0.3rem;
   list-style: none;
+  display: flex;
 }
+
 .navbar-container ul li a {
   color: #ffffffce;
   text-decoration: none;
   margin-left: 1rem;
   font-family: "inter-Bold", sans-serif;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
+
+/* Social links container */
 .social {
   margin-top: 0.2rem;
 }
-.twitter a {
-  border: 2px solid white;
-  padding: 0.2rem 0.7rem;
-  text-decoration: none;
-  border-radius: 10px;
-  border-color: #ffffff4b;
-  color: #ffffffce;
-  margin-left: .5rem;
-  font-size: 0.7rem;
-  font-family: "inter", sans-serif;
-}
-.linkedin a {
-  border: 2px solid white;
-  padding: 0.2rem 0.7rem;
-  text-decoration: none;
-  border-radius: 10px;
-  border-color: #ffffff4b;
-  color: #ffffffce;
-  margin-left: .5rem;
-  font-size: 0.7rem;
-  font-family: "inter", sans-serif;
-}
+
+/* Social link buttons (Twitter, LinkedIn, GitHub) */
+.twitter a,
+.linkedin a,
 .git a {
   border: 2px solid white;
   padding: 0.2rem 0.7rem;
@@ -128,30 +167,71 @@ header {
   border-radius: 10px;
   border-color: #ffffff4b;
   color: #ffffffce;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
   font-size: 0.7rem;
   font-family: "inter", sans-serif;
 }
+
+/* ===================== */
+/* ====== MEDIA QUERIES FOR NAVBAR RESPONSIVENESS ===== */
+/* ===================== */
+
+/* When the screen width is 768px or less, make navbar items stacked vertically */
+ @media (min-width: 393px){
+  .navbar-container {
+    width: 100%;
+    padding: 0;
+  }
+.navbar-container ul {
+  margin: 0 auto;
+}
+  .navbar-container ul li {
+  margin-top: 0.3rem;
+  margin-left: 0;
+  list-style: none;
+  display: flex;
+}
+
+.navbar-container ul li a {
+  font-size: .65rem;
+}
+
+  .socialsContainer{
+    display: none;
+  }
+
+}
+
+
+/* =================================== */
+/* =================================== */
+/* ====== HERO SECTION STYLING ====== */
+/* =================================== */
+/* =================================== */
 
 .heroContainer {
   /* border: 2px solid blue; */
   width: 60%;
   margin: 5rem auto 0;
 }
+
 .heroItems {
   /* border: 2px solid pink; */
   margin: 0 auto;
 }
+
+/* Hero headline */
 .heroItems h1 {
   font-size: 3.5rem;
   font-family: "interDisplay-ExtraBold";
   line-height: 1.3;
   text-align: center;
 }
+
+/* Hero paragraph */
 .heroItems p {
   font-size: 1.4rem;
   text-align: center;
   color: #ffffffce;
-  font-family: "inter-Regular";
   font-family: "inter-Light";
 }
