@@ -88,7 +88,7 @@
 
 html {
   font-size: 1rem;
-  outline: 2px solid red;
+  outline: 2px solid greenyellow;
 }
 
 body {
@@ -122,7 +122,6 @@ header {
   font-weight: 700;
   border: 2px solid blue;
   /* overflow-x: auto; */
-  
 }
 
 /* Prevent the scrollbar from showing up */
@@ -157,6 +156,10 @@ header {
 .social {
   margin-top: 0.2rem;
 }
+#hamburger {
+  display: none;
+  font-size: 3rem;
+}
 
 /* Social link buttons (Twitter, LinkedIn, GitHub) */
 .twitter a,
@@ -178,31 +181,50 @@ header {
 /* ===================== */
 
 /* When the screen width is 768px or less, make navbar items stacked vertically */
- @media (min-width: 412px){
+@media (max-width: 412px) {
   .navbar-container {
+    display: block;
     width: 100%;
     padding: 0;
+    text-align: right;
   }
-.navbar-container ul {
-  margin: 0 auto;
-}
-  .navbar-container ul li {
-  margin-top: 0.3rem;
-  margin-left: 0;
-  list-style: none;
-  display: flex;
-}
+  /* #navItems{
+    margin: 0 auto;
+    display: none;
+    justify-content: right;
+    height: 300px;
+  } */
+  #navItems{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 2s ease;
+    display: inline-block;
 
-.navbar-container ul li a {
-  font-size: .65rem;
-}
-
-  .socialsContainer{
+  }
+  #navItems.show{
+    max-height: 300px;
+  }
+  .socialsContainer {
     display: none;
   }
-
+  .nav-hamburger {
+    display: block;
+    height: 35px;
+    width: 100%;
+    /* border: 2px solid pink; */
+    text-decoration: none;
+    background-color: #7a5c5c8a;
+  }
+  #hamburger {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 5px 0;
+  }
 }
-
 
 /* =================================== */
 /* =================================== */

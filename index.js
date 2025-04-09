@@ -1,4 +1,3 @@
-
 //Makes the social icons bubble(breathe)
 const twitter = document.querySelectorAll(".social")[0];
 const linkedin = document.querySelectorAll(".social")[1];
@@ -17,19 +16,17 @@ let scaleCount = 0;
 let scaleCount2 = 0;
 let scaleCount3 = 0;
 let scaleCount4 = 0;
-let scaleRecursion = 0
+let scaleRecursion = 0;
 
 linkedin.style.display = "none";
 git.style.display = "none";
 let firstInterval = setInterval(rotateIcon, 10);
 
 function rotateIcon() {
-  if(scaleRecursion>=8){
-    setInterval(rotateIcon2,10000)
-    scaleRecursion-=8
-        githubIcon.style.color = "#1da1f2";
-        
-
+  if (scaleRecursion >= 8) {
+    setInterval(rotateIcon2, 10000);
+    scaleRecursion -= 8;
+    githubIcon.style.color = "#1da1f2";
   }
   if (scaleX2 >= 1.5 || scaleY2 >= 1.5) {
     scaleX2 -= 0.5;
@@ -94,3 +91,32 @@ function rotateIcon2() {
   }
 }
 
+// Hamburger's logic
+/*const hamburger = document.getElementById("hamburger");
+const navItems = document.getElementById("navItems");
+hamburger.addEventListener("click", showNav);
+function showNav() {
+  // window.alert("i was clicked")
+
+  if (navItems.style.display === "none") {
+    navItems.style.display = "inline-block";
+  }
+  else{
+        navItems.style.display = "none";
+
+  }
+}
+*/
+
+const hamburger = document.getElementById("hamburger");
+const navItems = document.getElementById("navItems");
+
+hamburger.addEventListener("click", () => {
+  // if (navItems.style.display === "inline-block") {
+  //   navItems.style.display = "none";
+  // } else {
+  //   navItems.style.display = "inline-block";
+  // }
+
+  navItems.classList.toggle("show")
+});
