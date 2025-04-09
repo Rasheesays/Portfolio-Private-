@@ -111,6 +111,10 @@ function showNav() {
 const hamburger = document.getElementById("hamburger");
 const navItems = document.getElementById("navItems");
 
+const hamburgerOpenIcon = document.querySelectorAll(".nav-hamburger")[0]
+const hamburgerCloseIcon = document.querySelectorAll(".nav-hamburger")[1]
+
+// navItems.style.display="block"
 hamburger.addEventListener("click", () => {
   // if (navItems.style.display === "inline-block") {
   //   navItems.style.display = "none";
@@ -119,4 +123,10 @@ hamburger.addEventListener("click", () => {
   // }
 
   navItems.classList.toggle("show")
+  // setInterval(()=>{hamburgerOpenIcon.replaceWith(hamburgerCloseIcon.cloneNode(true))},2000)
+
+  // if(){
+  //   hamburgerCloseIcon.addEventListener("click", )
+  // }
+  // setInterval(()=>{hamburgerCloseIcon.replaceWith(hamburgerOpenIcon.cloneNode(true))},2000)
 });

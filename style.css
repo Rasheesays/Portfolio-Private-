@@ -88,14 +88,13 @@
 
 html {
   font-size: 1rem;
-  outline: 2px solid greenyellow;
+  /* outline: 2px solid greenyellow; */
 }
 
 body {
   background-color: #000;
   color: #fff;
-  overflow-x: hidden;
-  border: 2px solid white;
+  /* overflow-x: hidden; */
 }
 
 /* ========================= */
@@ -105,7 +104,7 @@ body {
 /* ========================= */
 
 header {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -120,7 +119,7 @@ header {
   align-items: center;
   font-size: 1rem;
   font-weight: 700;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   /* overflow-x: auto; */
 }
 
@@ -134,7 +133,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
 }
 
 .navbar-container ul li {
@@ -188,29 +187,34 @@ header {
     padding: 0;
     text-align: right;
   }
-  /* #navItems{
-    margin: 0 auto;
-    display: none;
-    justify-content: right;
-    height: 300px;
-  } */
-  #navItems{
+  #navItems {
     max-height: 0;
     overflow: hidden;
     transition: max-height 2s ease;
     display: inline-block;
+  }
+  #navItems.show {
+    max-height: 800px;
+  }
 
+  .navbar-container ul {
+    margin: 0 auto;
+    width: 60%;
+    background: #0000005c;
   }
-  #navItems.show{
-    max-height: 300px;
+
+  .navbar-container ul li a {
+    font-size: 3rem;
+    font-family: "interDisplay-Black";
   }
+
   .socialsContainer {
     display: none;
   }
   .nav-hamburger {
     display: block;
     height: 35px;
-    width: 100%;
+    /* width: 100%; */
     /* border: 2px solid pink; */
     text-decoration: none;
     background-color: #7a5c5c8a;
